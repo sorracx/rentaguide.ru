@@ -1,0 +1,61 @@
+/******* import fonts *******
+============================*/
+
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic);
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic);
+
+/******* core *******
+====================*/
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    display: inline-block;
+    margin: 0;
+    font: bold 33px/50px "Times", sans-serif;
+}
+
+/******* header *******
+======================*/
+
+.site-header {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to right, #2887c8, #18baa5);
+    text-align: center;
+    position: fixed;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .13);
+}
+
+.site-header li {
+    font: 300 14px "Roboto", "Arial", sans-serif;
+}
+
+.unregistered-header-nav {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.unregistered-header-nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#nav-register::before,
+#nav-login::before {
+    font: 18px "Font Awesome 5 Free";
+    margin-right: 7px;
+}
+
+#nav-register::before {
+    content: "\f0fe";
+}
+
+#nav-login::before {
+    content: "\f2f6";
+    font-weight: bold;
+}

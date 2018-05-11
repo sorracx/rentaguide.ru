@@ -7,6 +7,7 @@ class View
     private $params;
     private $path;
     public $layouts = "default";
+    public $header = "unregistered";
 
     public function __construct($params)
     {
@@ -17,6 +18,7 @@ class View
     public function render($title, $vars = [])
     {
         extract($vars);
+        $header = $this->header;
         $path = "app/views/$this->path.php";
         if (file_exists($path)) {
             ob_start();

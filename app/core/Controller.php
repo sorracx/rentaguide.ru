@@ -4,10 +4,10 @@ namespace app\core;
 
 abstract class Controller
 {
-    private $params;
-    private $acl;
-    private $view;
-    private $model;
+    protected $params;
+    protected $acl;
+    protected $view;
+    protected $model;
 
     public function __construct($params)
     {
@@ -19,7 +19,7 @@ abstract class Controller
         $this->model = $this->loadModel($this->params["controller"]);
     }
 
-    private function checkAcl()
+    protected function checkAcl()
     {
         $path = "app/acl/".$this->params["controller"].".php";
         if (!file_exists($path)) {
@@ -30,17 +30,20 @@ abstract class Controller
         if ($this->getAcl("all")) {
             return "all";
         }
+        if ($this->getAcl("guest") and !isset($_SESSION["account"])) {
+            return "guest";
+        }
         // TODO: other acl
 
         return false;
     }
 
-    private function getAcl($key)
+    protected function getAcl($key)
     {
         return in_array($this->params["action"], $this->acl[$key]);
     }
 
-    private function loadModel($title)
+    protected function loadModel($title)
     {
         $model = "app\models\\".ucfirst($title);
         if (class_exists($model)) {
