@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="public/styles/main.css">
-    <link rel="stylesheet" href="public/styles/normalize.css">
-    <link rel="stylesheet" href="public/styles/fontawesome.css">
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/normalize.css">
+    <link rel="stylesheet" href="/public/styles/fontawesome.css">
     <?= $style ?>
 </head>
 <body>
@@ -18,5 +19,7 @@
     <footer class="site-footer">
 
     </footer>
+    <script src="/public/scripts/jquery.js"></script>
+    <script src="/public/scripts/main.js"></script>
 </body>
 </html>

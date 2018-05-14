@@ -1,5 +1,6 @@
 <?php
 
 return [
-    "" => "index@index"
+    "" => "index@index",
+    "account/register" => "account@register"
 ];

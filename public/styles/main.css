@@ -30,14 +30,29 @@ a {
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .13);
 }
 
-.site-header li {
-    font: 300 14px "Roboto", "Arial", sans-serif;
+.touch-menu {
+    display: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.touch-menu::before {
+    content: "\f0c9";
+    font: bold 33px/50px "Font Awesome 5 Free";
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-nav li {
+    font: 300 14px/50px "Roboto", "Arial", sans-serif;
 }
 
 .unregistered-header-nav {
     position: absolute;
     top: 0;
     right: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .unregistered-header-nav li {
@@ -58,4 +73,46 @@ a {
 #nav-login::before {
     content: "\f2f6";
     font-weight: bold;
+}
+
+/******* adaptive header *******
+===============================*/
+
+@media screen and (max-width: 1280px) {
+    .site-header {
+        text-align: left;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .touch-menu {
+        display: inline-block;
+    }
+
+    .header-nav {
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(to right, #2887c8, #18baa5);
+        display: none;
+    }
+
+    .header-nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        border-top: #fff solid 1px;
+    }
+
+    .header-nav a {
+        display: block;
+    }
+
+    .header-nav a:hover {
+        background: linear-gradient(to right, #1b6e9b, #0e8d80);
+    }
 }
