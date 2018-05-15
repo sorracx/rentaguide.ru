@@ -20,6 +20,7 @@
 
     </footer>
     <script src="/public/scripts/jquery.js"></script>
+    <script src="/public/scripts/form.js"></script>
     <script src="/public/scripts/main.js"></script>
 </body>
 </html>

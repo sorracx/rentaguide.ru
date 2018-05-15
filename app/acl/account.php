@@ -1,7 +1,9 @@
 <?php
 
 return [
-    "all" => [],
+    "all" => [
+        "logout"
+    ],
     "guest" => [
         "register"
     ],

@@ -24,9 +24,9 @@ class View
             ob_start();
             require_once $path;
             $content = ob_get_clean();
-            $path = "/public/styles/$this->path.css";
+            $path = "public/styles/$this->path.css";
             if (file_exists($path)) {
-                $style = "<link rel='stylesheet' href='$path'>";
+                $style = "<link rel='stylesheet' href='/$path'>";
             } else {
                 $style = "";
             }
@@ -42,5 +42,20 @@ class View
             require_once $path;
         }
         exit;
+    }
+
+    public function redirect($url)
+    {
+        exit(header("Location: $url"));
+    }
+
+    public function message($message)
+    {
+        exit(json_encode(["message" => $message]));
+    }
+
+    public function location($url)
+    {
+        exit(json_encode(["url" => $url]));
     }
 }

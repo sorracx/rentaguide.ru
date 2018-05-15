@@ -30,7 +30,7 @@ abstract class Controller
         if ($this->getAcl("all")) {
             return "all";
         }
-        if ($this->getAcl("guest") and !isset($_SESSION["account"])) {
+        if ($this->getAcl("guest") and !isset($_COOKIE["email"])) {
             return "guest";
         }
         // TODO: other acl
@@ -50,5 +50,15 @@ abstract class Controller
             return new $model();
         }
         return false;
+    }
+
+    protected function clearStr($str)
+    {
+        return trim(strip_tags($str));
+    }
+
+    protected function clearInt ($int)
+    {
+        return abs((int)$int);
     }
 }

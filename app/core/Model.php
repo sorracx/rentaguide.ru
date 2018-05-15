@@ -6,7 +6,7 @@ use app\lib\Db;
 
 abstract class Model
 {
-    private $db;
+    protected $db;
 
     public function __construct()
     {

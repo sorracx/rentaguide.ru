@@ -1,0 +1,135 @@
+/******* core *******
+====================*/
+
+body {
+    background: fixed url(../../images/background.png) no-repeat;
+    background-size: cover;
+    color: #fff;
+    font: 300 14px/21px "Roboto Condensed", "Arial", sans-serif;
+}
+
+.container {
+    width: 273px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.social-login + p {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 30px 0;
+}
+
+/******* social login *******
+============================*/
+
+.social-login {
+    padding: 0;
+    margin: 55px 0 0 0;
+}
+
+.social-login li {
+    display: inline-block;
+    margin-right: 13px;
+}
+
+.social-login li:last-child {
+    margin: 0;
+}
+
+.social-login a {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 35px;
+    color: #30aab4;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/******* form *******
+====================*/
+
+.container form > input {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0 0 7px 0;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.container input:focus,
+.container button:focus {
+    outline: 0;
+}
+
+.container input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.container form p {
+    margin: 0 0 50px 0;
+}
+
+.container form p a {
+    border-bottom: 1px solid #fff;
+}
+
+.container button[type=submit] {
+    color: #fff;
+    background: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    font: 300 16px "Roboto", "Arial", sans-serif;
+}
+
+.container label,
+.container input[type=checkbox],
+.container button {
+    cursor: pointer;
+}
+
+/******* placeholder *******
+===========================*/
+
+.container input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.container input::-moz-placeholder {
+    color: #fff;
+}
+
+.container input:-moz-placeholder {
+    color: #fff;
+}
+
+.container input:-ms-input-placeholder {
+    color: #fff;
+}
+
+.container input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.container input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.container input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+.container input:focus:-ms-input-placeholder {
+    color: transparent;
+}

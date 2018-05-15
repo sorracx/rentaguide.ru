@@ -7,15 +7,24 @@
 /******* core *******
 ====================*/
 
+body {
+    padding-top: 50px;
+}
+
 a {
     text-decoration: none;
     color: #fff;
+}
+
+ul {
+    list-style: none;
 }
 
 .logo {
     display: inline-block;
     margin: 0;
     font: bold 33px/50px "Times", sans-serif;
+    color: #fff;
 }
 
 /******* header *******
@@ -27,6 +36,7 @@ a {
     background: linear-gradient(to right, #2887c8, #18baa5);
     text-align: center;
     position: fixed;
+    top: 0;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .13);
 }
 
